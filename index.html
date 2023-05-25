@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minesweeper</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div class="result text-shadow-drop-center"></div>
+      <div class="win">
+        <div class="header-win">
+          <div class="title">
+            <img src="img/logo.png" alt="" class="logo" />
+            <h1>Minesweeper</h1>
+          </div>
+
+          <div class="title-bar-controls">
+            <button aria-label="Minimize">
+              <i class="fa-solid fa-window-minimize fa-lg"></i>
+            </button>
+            <button aria-label="Maximize">
+              <i class="fa-regular fa-window-maximize fa-lg"></i>
+            </button>
+            <button aria-label="Close">
+              <i class="fa-solid fa-xmark fa-xl"></i>
+            </button>
+          </div>
+        </div>
+        <div class="menu">
+          <span>Game</span>
+          <span>Help</span>
+          <span class="time">
+            <select id="timerSelect" onchange="disableSelect(this)">
+              <option value="10">10 sec</option>
+              <option value="20">20 sec</option>
+              <option value="30" selected>30 sec</option>
+              <option value="40">40 sec</option>
+              <option value="50">50 sec</option>
+              <option value="60">60 sec</option>
+              <option value="70">70 sec</option>
+              <option value="80">80 sec</option>
+              <option value="90">90 sec</option>
+            </select>
+          </span>
+        </div>
+        <div class="container">
+          <div class="top">
+            <div class="points"><span class="counter"></span></div>
+            <div class="smile">
+              <i class="fa-solid fa-face-smile fa-2xl icon1" id="happy"></i>
+              <i class="fa-solid fa-face-grin-beam-sweat fa-2xl" id="sad"></i>
+            </div>
+            <div class="countdown"><span class="timer">30</span></div>
+          </div>
+          <div class="grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
