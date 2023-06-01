@@ -14,12 +14,8 @@ body {
   position: relative;
   font-family: 'Roboto Mono', monospace;
   color: white;
-  display: flex;
-  justify-content: top;
-  align-items: center;
-  flex-direction: column;
-  gap: 1%;
-  overflow: hidden;
+
+  
 }
 
 #wrapper {
@@ -38,7 +34,7 @@ h1 {
 }
 
 .win {
-  position: absolute;
+  
   width: fit-content;
   max-width: 400px;
   background-color: #0055e5;
@@ -49,7 +45,6 @@ h1 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  position: relative;
   box-shadow: inset -1px -1px #00138c, inset 1px 1px #0831d9,
     inset -2px -2px #001ea0, inset 2px 2px #166aee, inset -3px -3px #003bda,
     inset 3px 3px #0855dd;
@@ -74,7 +69,7 @@ h1 {
     #003dd7 96%,
     #003dd7
   );
-  padding: 3px 5px 3px 3px;
+  
 
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -91,7 +86,7 @@ h1 {
 
 .logo {
   width: 20px;
-  height: fit-content;
+  height: 20px;
 }
 
 .title-bar-controls {
@@ -300,4 +295,24 @@ select > option {
 .result > p {
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+@media(max-width: 450px) {
+    #wrapper {
+        
+
+        justify-content: flex-start;
+        padding: .5rem;
+        
+
+      }
+  .win {
+
+    box-shadow: none;
+
+  }
+
+  
+
+
 }
